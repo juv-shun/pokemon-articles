@@ -1,0 +1,20 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "pokemon-articles",
+  "compatibility_date": "2026-11-01",
+  "d1_databases": [
+    {
+      // 構築記事DB（このリポジトリでマイグレーション管理）
+      "binding": "DB",
+      "database_name": "pokemon-articles",
+      "database_id": "df843ac4-76a5-4dc4-858b-7fa7016e6407",
+      "migrations_dir": "migrations"
+    },
+    {
+      // ポケモンマスターDB（別リポジトリ管理。このリポジトリからは参照のみ）
+      "binding": "POKEMON_DB",
+      "database_name": "pokemon-master",
+      "database_id": "1033c58d-6cfb-4829-bb23-71183176a90e"
+    }
+  ]
+}
